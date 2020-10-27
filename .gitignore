@@ -1,0 +1,12 @@
+# Removendo todos os compilados de LaTeX
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# Remover os PDFs 
+
+*.pdf

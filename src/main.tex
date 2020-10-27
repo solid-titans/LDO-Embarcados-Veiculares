@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{setspace}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+
+\lstdefinestyle{codigo}{
+    numberstyle=\tiny,
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=codigo}
+
+\setstretch{1.5}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\pagenumbering{gobble}
+\clearpage
+\thispagestyle{empty}
+
+\title{Learning Digital Object - Embarcado veiculares}
+\author{Lucas Bottrel \and Lucas Santiago \and Marcelo França \and Miguel Leocádio \and Rafael Amauri}
+
+
+
+\begin{document}
+\maketitle
+
+\newpage
+
+\section*{TRANSMISSÃO DE DADOS}
+\subsection*{\underline{Histórico}}
+
+\hspace{4pt} Antes da década de 90, a transmissão de informações entre as Unidades Eletrônicas de Controle (responsáveis por 
+interpretar dados e controlar atuadores e outros componentes) era feita utilizando fiação comum. Um carro de luxo 
+comum desta época continha, em média, \href{https://www.youtube.com/watch?v=ptH8zxhf-jM}{30 quilos de fiação}, mais de 1 km de fios de cobre e mais de 2 mil conexões separadas. 
+Toda essa estrutura era muito cara para fabricar, manter e instalar, além de ser suscetível a erros.
+
+
+\begin{frame}
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{Imagens/Transmissao de Dados/Sistema eletrico de um carro.png}
+        \caption{Alguns componentes básicos que são controlados eletricamente. (crédito: \href{https://www.howacarworks.com/basics/how-car-electrical-systems-work}{How A Car Works})}
+    \end{figure}
+
+\end{frame}
+
+\subsection*{\underline{CAN}}
+
+\hspace{4pt} Ao longo dos anos 90, a indústria passou a adotar um novo padrão de rede interna dos veículos desenvolvido pela \href{http://esd.cs.ucr.edu/webres/can20.pdf}{Bosch}: o barramento CAN (Controller Area Network).
+Os barramentos CAN fazem uso de sinais digitais para enviar dados para as Unidades Eletrônicas de Controle. São bidirecionais, ou seja, os dados podem fluir em ambas as direções, e contam com um sistema elétrico de detecção de falhas e de definição de sinais prioritários. A CAN representou um grande avanço na transmissão de dados em veículos, reduzindo o tamanho, peso e complexidade das redes embarcadas.
+
+
+\end{document}
