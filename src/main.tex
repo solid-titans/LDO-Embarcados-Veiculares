@@ -69,20 +69,110 @@ comum desta época continha, em média, \href{https://www.youtube.com/watch?v=pt
 Toda essa estrutura era muito cara para fabricar, manter e instalar, além de ser suscetível a erros.
 
 
-\begin{frame}
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[scale=0.2]{Imagens/Transmissao de Dados/Sistema eletrico de um carro.png}
-        \caption{Alguns componentes básicos que são controlados eletricamente. (crédito: \href{https://www.howacarworks.com/basics/how-car-electrical-systems-work}{How A Car Works})}
-    \end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.2]{Imagens/Transmissao de Dados/Sistema eletrico de um carro.png}
+    \caption{Alguns componentes básicos que são controlados eletricamente. (crédito: \href{https://www.howacarworks.com/basics/how-car-electrical-systems-work}{How A Car Works})}
+\end{figure}
 
-\end{frame}
 
 \subsection*{\underline{CAN}}
 
 \hspace{4pt} Ao longo dos anos 90, a indústria passou a adotar um novo padrão de rede interna dos veículos desenvolvido pela \href{http://esd.cs.ucr.edu/webres/can20.pdf}{Bosch}: o barramento CAN (Controller Area Network).
-Os barramentos CAN fazem uso de sinais digitais para enviar dados para as Unidades Eletrônicas de Controle. São bidirecionais, ou seja, os dados podem fluir em ambas as direções, e contam com um sistema elétrico de detecção de falhas e de definição de sinais prioritários. A CAN representou um grande avanço na transmissão de dados em veículos, reduzindo o tamanho, peso e complexidade das redes embarcadas.
 
+Os \href{https://www.youtube.com/watch?v=5eh8Poz5g7M}{barramentos CAN} fazem uso de sinais digitais para enviar dados para as Unidades Eletrônicas de Controle. São bidirecionais, ou seja, os dados podem fluir em ambas as direções, e contam com um sistema elétrico de detecção de falhas e de definição de sinais prioritários. A CAN representou um grande avanço na transmissão de dados em veículos, reduzindo o tamanho, peso e complexidade das redes embarcadas.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.6]{Imagens/Transmissao de Dados/CAN bus.png}
+    \caption{Estrutura de uma mensagem transmitida por um barramento CAN. (crédito: \href{https://www.typhoon-hil.com/documentation/typhoon-hil-schematic-editor-library/References/can_bus_protocol.html}{Typhoon HIL})}
+\end{figure}
+
+
+\newpage
+
+
+\subsection*{\underline{Ethernet: o futuro}}
+
+\hspace{4pt} Na atualidade, projetistas estão desenvolvendo uma nova estrutura de rede para os automóveis usando a tecnologia Ethernet (a mesma usada nos famosos “cabos de rede”).
+
+As vantagens de usar um barramento Ethernet residem na maior largura de banda (mais dados transmitidos simultaneamente), sua adaptabilidade (a taxa de transmissão passou dos Megabits para os Gigabits por segundo) e grande número de fornecedores, além de ter a capacidade de se ter uma \href{https://www.youtube.com/watch?v=JTv8p7VFxGE}{mídia física única} para transmissão de quaisquer tipos de dados.
+
+Alex Tan, gerente geral de Soluções Ethernet Automotivas na empresa NXP Semiconductors, afirma que o uso da \href{https://www.youtube.com/watch?v=SpfG-LwO8MQ}{tecnologia Ethernet} adaptada aos automóveis será capaz de gerar melhorias nos veículos sem alterações significativas de hardware, facilitando a integração da estrutura já existente com o recebimento de dados da internet e com novos equipamentos como câmeras e sensores.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{Imagens/Transmissao de Dados/Arquitetura de redes veiculares.png}
+    \caption{Pesquisas estão sendo desenvolvidas para gerar uma integração no trânsito que vai além do recebimento de dados nos veículos. (crédito: \href{https://www.researchgate.net/figure/Vehicular-network-architecture_fig1_318993172}{ResarchGate})}
+\end{figure}
+
+
+\newpage
+
+\section*{Segurança}
+Conhecimento anterior: \href{https://www.youtube.com/watch?v=PLiE0Nr8VOE}{Assista esse vídeo} (o vídeo está em inglês, mas é possível usar a legenda automática do YouTube para português brasileiro).
+
+Assim como dito no vídeo, automóveis são extremamente complicados de se manterem atualizados e qualquer falha de segurança pode ser bastante grave. Por exemplo, se uma falha de segurança permitir que uma pessoa tenha o controle sobre o acelerador e o freio de um carro, quais seriam as implicações na segurança dos passageiros? Para que isso não acontecesse, seria importante atualizações constantes para o software do carro, mas um carro pode durar quase 20 anos, como manteríamos 20 anos de atualização de algum dispositivo? \href{https://www.tecmundo.com.br/celular/28427-quanto-tempo-dura-um-smartphone-.htm}{Se um celular hoje dura alguns poucos anos}, como seria o caso de um automóvel?
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=1.3]{Imagens/Seguranca/Seguranca IOT.png}
+    \caption{Fonte: \href{https://bics.com/iot-safe-robust-iot-security-at-scale/}{Link}}
+\end{figure}
+
+
+\newpage
+
+\section*{SEGURANÇA - Avançado}
+
+\subsection*{Caso se interesse pela área e queira ir mais a fundo entre nesse \href{https://bluepex.com.br/industria-iot/}{site} e segue a imagem abaixo:}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=2]{Imagens/Seguranca/IOT.png}
+    \caption{Fonte: \href{https://bluepex.com.br/industria-iot/}{Link}}
+\end{figure}
+
+
+Esse site conta um pouco a história da dificuldade da segurança dos \href{https://pt.wikipedia.org/wiki/Internet_das_coisas}{IOTs}. Há nele várias perguntas válidas sobre a temática. É importante ressaltar que algumas dessas perguntas não foram respondidas ainda e que estamos estudando métodos melhores de resolvê-las. Carros também usam vários \href{https://pt.wikipedia.org/wiki/Internet_das_coisas}{IOTs}, como sensores que serão abordados em outro capítulo deste documento. Todas as tecnologias mais novas serão abordadas na foto do próximo nível de segurança:
+
+\newpage
+
+\section*{SEGURANÇA - Caso queira ainda mais:}
+\subsection*{Caso queira pesquisar as temáticas de segurança}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=1.4]{Imagens/Seguranca/Mapa mental temas de seguranca.png}
+    \caption{Fonte: \href{https://github.com/solid-titans/LDO-Embarcados-Veiculares}{Criada para o projeto}, \href{https://github.com/solid-titans/LDO-Embarcados-Veiculares/blob/main/LICENSE}{mesma licensa do projeto.}}
+\end{figure}
+
+
+\newpage
+
+
+\section*{SENSORES E HARDWARE}
+
+\hspace{4pt} Com o desenvolvimento de novas tecnologias e aprimoramento do poder de processamento de \href{https://pt.wikipedia.org/wiki/Sistema_embarcado}{sistemas embarcados}, sensores cada vez mais precisos e poderosos puderam ser colocados em veículos para melhorar acessibilidade e conforto do usuário. Um exemplo de sistema embarcado com sensores é um \href{https://www.youtube.com/watch?v=AxapuVgepV8}{sensor de chuva} para para-brisas de carro, ou um \href{https://www.youtube.com/watch?v=EppMSSYBOm0}{sistema para estacionamento automático}. 
+
+Até onde a indústria automobilística vai, um grande número de indústrias e companhias estão envolvidos no desenvolvimento, na manufatura e na venda de carros, motos e ônibus, e a junção dessa indústria com a de tecnologia por meio dos sistemas embarcados é a próxima etapa na evolução  do mercado automobilístico por causa da integração entre o mundo virtual e o real por meio desses aparelhos.
+
+O futuro reserva tecnologias interessantes que já estão sendo desenvolvidas. O \href{https://www.youtube.com/watch?v=j7XKgLtTN2o}{controle automático adaptativo} é uma das mais novas tecnologias que estão sendo aperfeiçoadas. Além de ser usado em veículos de civis, também têm um foco em veículos comerciais, como o \href{https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F191121212606-tesla-cybertruck-exlarge-169.jpg&f=1&nofb=1}{Tesla Cybertruck}.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.75]{Imagens/Sensores e Hardware/Foto stock nivel hard.png}
+    \caption{Fonte: \href{https://github.com/solid-titans/LDO-Embarcados-Veiculares}{Criada para o projeto}, \href{https://github.com/solid-titans/LDO-Embarcados-Veiculares/blob/main/LICENSE}{mesma licensa do projeto.}}
+\end{figure}
+
+
+\newpage
 
 \end{document}
