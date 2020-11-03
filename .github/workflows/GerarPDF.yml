@@ -36,5 +36,5 @@ jobs:
       - name: Compilar o projeto
         run: make
       
-      - name: Pegar o pdf resultante
+      #- name: Pegar o pdf resultante
         # todo
