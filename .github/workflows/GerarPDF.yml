@@ -25,6 +25,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Baixar dependências do LaTeX
         run: |
-          apt update -y
-          apt install texlive-full make -y
+          sudo apt update -y
+          sudo apt install texlive-full make -y
           make
