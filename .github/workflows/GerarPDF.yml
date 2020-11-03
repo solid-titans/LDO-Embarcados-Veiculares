@@ -27,4 +27,14 @@ jobs:
         run: |
           sudo apt update -y
           sudo apt install texlive-full make -y
-          make
+        
+      - name: Ir para a pasta do projeto
+        with:
+          fetch-depth: 1
+          path: src/github.com/${{ github.repository }}
+          
+      - name: Compilar o projeto
+        run: make
+      
+      - name: Pegar o pdf resultante
+        # todo
