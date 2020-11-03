@@ -10,31 +10,13 @@ on:
   pull_request:
     branches: [ main ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  build_latex:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Baixar dependências do LaTeX
-        run: |
-          sudo apt update -y
-          sudo apt install texlive-full make -y
-        
-      - name: Ir para a pasta do projeto
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document
+        uses: dante-ev/latex-action@master
         with:
-          fetch-depth: 1
-          path: src/github.com/${{ github.repository }}
-          
-      - name: Compilar o projeto
-        run: make
-      
-      #- name: Pegar o pdf resultante
-        # todo
+          root_file: main.tex
